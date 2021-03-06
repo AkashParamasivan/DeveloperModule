@@ -33,12 +33,20 @@
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(model => model.devid, "devid", htmlAttributes: new { @class = "control-label col-md-2" })
+        @Html.LabelFor(model => model.devid, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.DropDownList("devid", null, htmlAttributes: new { @class = "form-control" })
+            @Html.EditorFor(model => model.devid, new { htmlAttributes = new { @class = "form-control" } })
             @Html.ValidationMessageFor(model => model.devid, "", new { @class = "text-danger" })
         </div>
     </div>
+
+    @*<div class="form-group">
+            @Html.LabelFor(model => model.devid, "devid", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor("devid", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.devid, "", new { @class = "text-danger" })
+            </div>
+        </div>*@
 
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
@@ -49,5 +57,5 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to View", "ReadD")
 </div>

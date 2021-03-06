@@ -122,11 +122,11 @@
     <Content Include="Views\User\LoginUser.cshtml" />
     <Content Include="Views\User\insertdev.cshtml" />
     <Content Include="Views\User\bugdev.cshtml" />
-    <Content Include="Views\User\ViewBugs.cshtml" />
-    <Content Include="Views\User\ViewModule.cshtml" />
     <Content Include="Views\User\insertModule.cshtml" />
     <Content Include="Views\User\Update.cshtml" />
     <Content Include="Views\User\UpdateBug.cshtml" />
+    <Content Include="Views\User\ViewBugs.cshtml" />
+    <Content Include="Views\User\ViewModule.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -159,10 +159,27 @@ namespace DeveloperModule.Controllers
             return View();
         }
 
-        public ActionResult ViewBugs()
+       /* public ActionResult ViewBugs(int id)
         {
-            var data = db.bugs.ToList();
-            return View(data);
+
+            Bug selecteddata = db.bugs.Where(x => x.bugid == id).SingleOrDefault();
+            return View(selecteddata);
+
+
+        }*/
+        public ActionResult ViewBugs(int? id)
+        {
+
+            Bug data = db.bugs.FirstOrDefault(x => x.bugid == id);
+            if(data != null)
+            {
+               
+                    return View(data);
+               
+
+            }
+            return View();
+
 
         }
 
@@ -199,10 +216,18 @@ namespace DeveloperModule.Controllers
 
         }
 
-        public ActionResult ViewModule()
+        public ActionResult ViewModule(int? id)
         {
-            var data = db.Modules.ToList();
-            return View(data);
+            Module data = db.Modules.FirstOrDefault(x => x.moduleid == id);
+            if (data != null)
+            {
+
+                return View(data);
+
+
+            }
+            return View();
+
 
         }
 
