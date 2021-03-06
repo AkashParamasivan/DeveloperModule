@@ -1,0 +1,38 @@
+﻿@model IEnumerable<DeveloperModule.Models.Module>
+
+@{
+    ViewBag.Title = "ViewModule";
+}
+
+<h2>ViewModule</h2>
+
+<p>
+    @Html.ActionLink("Create New", "insertModule")
+</p>
+<table class="table">
+    <tr>
+    
+        <th>
+            @Html.DisplayNameFor(model => model.Developer.devid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.moduledesc)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Developer.devid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.moduledesc)
+        </td>
+        <td>
+            @Html.ActionLink("back", "ReadD", new { id=item.moduleid }) |
+           
+    </tr>
+}
+
+</table>
